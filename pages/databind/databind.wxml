@@ -1,0 +1,26 @@
+<!--databind.wxml-->
+<view class="container">
+  <view class="content">
+    <text>{{content}}</text>
+  </view>
+
+  <view class="content" hidden="{{flag?true:false}}">
+    <text>{{hiddencontent}}</text>
+  </view>
+
+  <view>
+    <text>{{num1}} + {{num2}} = {{num1+num2}}</text>
+  </view>
+
+  <view>
+    <text>{{"你好  " + user.name}}</text>
+  </view>
+  <view id="tapTest" bindtap="checkme">checkme!</view>
+
+  <view class="classname">
+  <input  placeholder="输入数字" bindinput="num1"/>
+  <input  placeholder="输入数字" bindinput="num2"/>
+  <button type="primary" bindtap="add">计算</button>
+  <input placeholder="结果" value="{{result}}" disabled />
+  </view>
+</view>
